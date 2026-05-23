@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>imgcolor — pick a color from an image</title>
+<meta name="description" content="Pick a color from any image. Paste a screenshot, drop a file, or load a URL.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%23ff5577'/%3E%3Ccircle cx='32' cy='32' r='12' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="drop-veil" hidden>drop image</div>
+
+<main id="stage" class="empty">
+  <section id="empty-state">
+    <h1>imgcolor</h1>
+    <p class="hint">paste · drop · open · url</p>
+    <div class="actions">
+      <button id="btn-open" type="button">open file</button>
+      <button id="btn-url" type="button">load url</button>
+    </div>
+    <p class="formats">png · jpg · webp · gif · bmp · avif · svg · heic*</p>
+    <p class="kbd">⌘V / Ctrl+V to paste a screenshot</p>
+  </section>
+
+  <div id="canvas-wrap" hidden>
+    <canvas id="canvas"></canvas>
+    <div id="loupe" hidden>
+      <canvas id="loupe-canvas" width="120" height="120"></canvas>
+      <div id="loupe-crosshair"></div>
+    </div>
+  </div>
+</main>
+
+<aside id="panel" hidden>
+  <div id="current">
+    <button id="swatch" type="button" title="click to copy hex"></button>
+    <div id="values">
+      <button class="val" data-copy="hex" title="copy hex"><span class="lbl">hex</span><span id="v-hex" class="v">—</span></button>
+      <button class="val" data-copy="rgb" title="copy rgb"><span class="lbl">rgb</span><span id="v-rgb" class="v">—</span></button>
+      <button class="val" data-copy="hsl" title="copy hsl"><span class="lbl">hsl</span><span id="v-hsl" class="v">—</span></button>
+    </div>
+  </div>
+  <div id="history" aria-label="recent picks"></div>
+  <div id="controls">
+    <button id="btn-reset" type="button" title="load a different image">×</button>
+  </div>
+</aside>
+
+<div id="toast" role="status" aria-live="polite"></div>
+
+<input id="file-input" type="file" accept="image/*" hidden>
+
+<script src="app.js"></script>
+</body>
+</html>
