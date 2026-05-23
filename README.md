@@ -6,16 +6,28 @@ Static single-page app — no build step. Open `index.html` directly or host any
 
 ## Use
 
+Load an image:
+
 - **Paste** — ⌘V / Ctrl+V to paste a screenshot or image URL
 - **Drop** — drag a file (or a link) onto the window
 - **Open** — file picker for local images
 - **URL** — load by URL (image host must allow CORS)
 
-Hover the image to preview a color in the loupe. Click to copy the hex (also added to history). Click the swatch or any value chip to copy. `Esc` resets.
+Pick a color:
+
+- Hover the image to preview a color in the loupe.
+- Click to copy the hex (also added to history). Click the swatch or any value chip to copy.
+
+Pan and zoom:
+
+- **Scroll / pinch** — zoom around the cursor
+- **Drag** — pan (or use two-finger trackpad swipe; middle-click drag also pans)
+- **`0`** — fit image to window
+- **`Esc`** — reset and load a different image
 
 ## Formats
 
-Anything your browser can decode in an `<img>`: PNG, JPEG, WebP, GIF, BMP, AVIF, SVG. HEIC works in Safari; other browsers don't decode it natively.
+Anything your browser can decode in an `<img>`: PNG, JPEG, WebP, GIF, BMP, AVIF, SVG.
 
 ## Deploy to GitHub Pages
 
