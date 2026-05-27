@@ -1,8 +1,11 @@
 # imgcolor
 
-Pick a color from any image. Paste a screenshot, drop a file, or load a URL.
+A lightweight image color picker on the web. Quickly pick one or more colors from any image.
 
-Static single-page app — no build step. Open `index.html` directly or host anywhere.
+Available at: [phos.systems](https://imgcolor.phos.systems)
+
+<img width="1345" height="828" alt="image" src="https://github.com/user-attachments/assets/737d93db-91d5-4f06-b274-7fe8cedf7f65" />
+
 
 ## Use
 
@@ -28,10 +31,3 @@ Pan and zoom:
 ## Formats
 
 Anything your browser can decode in an `<img>`: PNG, JPEG, WebP, GIF, BMP, AVIF, SVG.
-
-## Deploy to GitHub Pages
-
-1. Push to GitHub.
-2. Repo → Settings → Pages → Source: **Deploy from a branch**, branch `main`, folder `/ (root)`.
-
-That's it. The `.nojekyll` file prevents Jekyll from touching anything.
